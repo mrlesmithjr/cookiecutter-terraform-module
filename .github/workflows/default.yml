@@ -1,0 +1,39 @@
+---
+name: "Cookiecutter"
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  cookiecutter:
+    name: "Cookiecutter"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.x"]
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    # Checkout the repository to the GitHub Actions runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip3 install cookiecutter
+
+      - name: Generate Cookiecutter Project
+        run: cookiecutter --config-file .example-cookiecutterrc .

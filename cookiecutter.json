@@ -1,0 +1,19 @@
+{
+  "module_name": "Enter Terraform module name",
+  "module_slug": "{{ cookiecutter.module_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "description": "Enter description of project",
+  "version": "0.1.0",
+  "author": "Your Name",
+  "company": "Enter company name",
+  "email": "me@example.com",
+  "website": "http://example.com",
+  "twitter": "example",
+  "license": ["MIT", "BSD-3", "Apache Software License 2.0"],
+  "year": "2020",
+  "github_username": "{{ cookiecutter.twitter }}",
+  "gitlab_username": "{{ cookiecutter.twitter }}",
+  "travis_username": "{{ cookiecutter.twitter }}",
+  "default_ci_badges": ["Y", "N"],
+  "terraform_provider": "Enter Terraform provider",
+  "terraform_registry_username": "{{ cookiecutter.twitter }}"
+}

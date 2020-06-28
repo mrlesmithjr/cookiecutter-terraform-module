@@ -1,0 +1,26 @@
+# Ignore any global ignores
+!*
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# logs
+# *.log
+
+# Directories
+.terraform/
+
+# Backup files
+*.bak
+
+# Ignore Mac .DS_Store files
+.DS_Store
+
+# Ignored vscode files
+.vscode/
