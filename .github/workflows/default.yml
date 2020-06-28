@@ -36,4 +36,4 @@ jobs:
           pip3 install cookiecutter
 
       - name: Generate Cookiecutter Project
-        run: cookiecutter --config-file .example-cookiecutterrc .
+        run: cookiecutter --config-file .example-cookiecutterrc --no-input .
