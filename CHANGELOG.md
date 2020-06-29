@@ -1,3 +1,11 @@
+commit 453db1a26e8b9776fed9da2ce01222ccfa9ce6da
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Jun 28 10:54:49 2020 -0400
+
+    Added Git config to post hook script
+    
+    This will ensure the user.name and user.email are setup correctly.
+
 commit bba4db4b2010f8511a1b67258061f40667fb5b34
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Jun 28 10:49:11 2020 -0400
